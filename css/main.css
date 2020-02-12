@@ -1,0 +1,27 @@
+body {
+  font-size: 16px;
+  font-family: verdana, sans-serif;
+}
+.continer{
+  width: 300px;
+  margin: auto;
+}
+
+#app2 h1{
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+  padding: 16px 0;
+}
+
+#app2 li {
+  line-height: 1.5;
+}
+#app2 input[type="text"] {
+  padding: 2px;
+  }
+.v-enter-action, .v-leave-action{
+  transition: opacity ls;
+}
+.v-enter, .v-leave-to{
+  opacity: 0;
+}

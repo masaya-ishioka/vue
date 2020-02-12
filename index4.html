@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <!-- DOMを直接参照 -->
+    <div id="app">
+      <button v-on:click="handleClick">カウントアップ</button>
+      <button v-on:click="show=!show">表示/非表示></button>
+      <span ref="count" v-if="show">0</span>
+    </div>
+    <!-- 画像変更 -->
+    <div id="app2">
+      <input type="file" v-on:change="handleChage">
+      <div v-if="preview"><img v-bind:src="preview"></div>
+    </div>
+
+    <!-- スクロールイベントによる制御 -->
+    <div id="app3">
+      <header v-vind:class="{ compact: scrolly > 200 }">
+        200pxよりスクロールしたら　.compact　を付与
+      </header>
+    </div>
+    <!-- トップまでスクロール -->
+    <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@12.1.5"></script>
+    <div id="app4">
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div><div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div><div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div class="content">
+        aaaaaaaaaaa
+      </div>
+      <div v-on:click="scrollTop">
+        ページ上部へ移動
+      </div>
+    </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="js/main4.js"></script>
+  </body>
+</html>

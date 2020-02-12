@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/main.css">
+    <title>練習するよ！</title>
+  </head>
+  <body>
+    <div id="app" class="continer">
+      <p>hello {{ name.toUpperCase() }}!</p>
+    <!-- {{}}はjsを書くことができる。  -->
+      <p><input type="text" v-model="name"></p>
+    </div>
+
+    <!-- 要素追加削除１ -->
+    <div id="app2" class="continer">
+      <h1>To do list</h1>
+      <ul>
+        <li v-for="todo in todos">{{ todo }}</li>
+      </ul>
+
+      <ul v-for="(todo,index) in list">
+        <li>{{ index + 1 }}:{{ todo.text }}</li>
+      </ul>
+      <input type="text" v-model="addText" placeholder="ToDo入力">
+      <button v-on:click="addToDo()">追加</button>
+    </div>
+
+    <!-- クリックリベントによるaleat表示 -->
+    <div id="app3" class="continer">
+      <p><button v-on:click="handClick">Click</button></p>
+    </div>
+    <!-- クリックイベントによる表示非表示 -->
+    <div class="continer" id="app4">
+      <button v-on:click="show=!show">切り替え</button>
+      <transition>
+        <p v-if="show">Hello JS</p>
+      </transition>
+    </div>
+
+    <!-- リスト表示のメソッド -->
+    <div class="continer" id="app5">
+      <p>{{ message.value }}</p>
+      <p>{{ message.value.length }}</p>
+      <p>{{ list[2] }}</p>
+      <p>{{ list[num] }}</p>
+    </div>
+    <!-- クリックイベントによる数の上昇・削除  -->
+    <div class="continer" id="app6">
+      <p>{{ count }}</p>
+      <button v-on:click="push">push</button>
+      <button v-on:click="reset">reset</button>
+    </div>
+    <!-- radiusで画像の大きさの変更 -->
+    <div class="continer" id="app7">
+      <svg xmlns="http://www.w3.org/2000/svg" width="300px" height="200px">
+          <circle cx="100" cy="75" v-bind:r="radius" fill="red"/>
+      </svg>
+      <input type="range" min="0" max="100" v-model="radius">
+    </div>
+    <div id="sample-template">
+      <button v-on:click='show=!show'>login</button>
+      <template v-if="show">
+        <label>Username</label>
+        <input placeholder="Enter your username">
+      </template>
+      <template>
+        <label>Email</label>
+        <input placeholder="Enter your email address">
+      </template>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="app">
+      <h3>Users</h3>
+      <div v-for="result in results" class="user-name">
+        <div>
+          <label>ID:</label>
+          {{ result.id }}
+        </div>
+        <div>
+          <label>Name:</label>
+          {{ result.name }}
+        </div>
+        <div>
+          <label>Email:</label>
+          {{ result.email }}
+        </div><br>
+      </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script src="js/main9.js"></script>
+  </body>
+</html>

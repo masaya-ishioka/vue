@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="app">
+      <div>
+        <img v-bind:src="imagePath" :width="width">
+      </div>
+      <div>
+        <button v-on:click = "clickDog">犬</button>
+        <button v-on:click = "clickCat">猫</button>
+        <button @click="clickWidth">幅500</button>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script src="js/main8.js"></script>
+  </body>
+</html>

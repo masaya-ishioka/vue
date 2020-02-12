@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/main.css">
+    <title></title>
+  </head>
+  <body>
+    <!-- 要素の追加や削除 -->
+    <div id="app" class="continer">
+      <span>NAME</span><br>
+      <input v-model="name" placeholder="name"><br>
+      <span>HP</span><br>
+      <input v-model="hp" placeholder="hp"><br>
+      <button v-on:click="doAdd">モンスター追加</button>
+      <ul>
+        <li v-for="(item, index) in list" v-bind:key="item.id" v-if=" item.hp">
+          ID.{{ item.id }} {{ item.name }} HP.{{ item.hp }}
+          <span v-if="item.hp > 300">強い！</span>
+          <span v-if="item.hp < 50">瀕死</span><br>
+          <button v-on:click="doAttack(index)">攻撃する</button>
+          <button v-on:click="doRemove(index)">モンスター削除</button>
+        </li>
+      </ul>
+    </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="js/main3.js"></script>
+  </body>
+</html>

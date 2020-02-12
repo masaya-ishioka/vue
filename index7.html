@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>component1</title>
+  </head>
+  <body>
+    <div id="app">
+      <ul>
+        <comp-child v-for="item in list"
+        v-bind:key="item.id"
+        v-bind="item"
+        v-on:attack="handleAttack">
+        </comp-child>
+      </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script src="js/main7.js"></script>
+  </body>
+</html>

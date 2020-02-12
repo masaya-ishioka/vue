@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <!-- リストの絞り込み -->
+    <div id="app">
+      <input v-model.number="budget">円以下に絞り込む
+      <input v-model.number="limit">件表示
+      <p>{{ matched.length }} 件中 {{ limited.length }}件表示中</p>
+      <ul>
+        <li v-for="item in limited" v-bind:key="item.id">
+          {{ item.name }} {{ item.price }}円
+        </li>
+      </ul>
+    </div>
+
+    <div id="app2">
+      <!-- メソッドはキャッシュを使っていないため毎回違う数字が表示されるが
+      算出プロパティではキャッシュを使っているため毎回同じ数値になる。 -->
+      <ol>
+        <li>{{ computedData }}</li>
+        <li>{{ computedData }}</li>
+      </ol>
+      <ol>
+        <li>{{ methodsData() }}</li>
+        <li>{{ methodsData() }}</li>
+      </ol>
+    </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="js/main5.js"></script>
+  </body>
+</html>

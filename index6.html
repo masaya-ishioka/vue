@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="app">
+      <select v-model="current">
+        <option v-for="topic in topics" v-bind:value="topic.value" >
+          {{ topic.name }}
+        </option>
+      </select>
+      <div v-for="item in list">{{ item.full_name }}</div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script src="js/main6.js"></script>
+  </body>
+</html>
